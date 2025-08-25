@@ -35,7 +35,7 @@ O projeto está organizado com os seguintes arquivos e diretórios:
 
 ### **Como Acessar o Site**
 
-Você pode visualizar a página web do projeto diretamente através do link do GitHub Pages: 
+Você pode visualizar a página web do projeto diretamente através do link do GitHub Pages: https://lipe-alves.github.io/minimercado-ideal/
 
 ---
 
