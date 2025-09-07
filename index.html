@@ -4,67 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/logo.jpeg">
     <title>Minimercado Ideal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bem-vindo ao Minimercado Ideal!</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="carrinho.html">Carrinho</a>
+    <header class="cabecalho container-fluid">
+        <div class="cabecalho-titulo">
+            <img 
+                class="d-block w-25"
+                src="imagens/logo.jpeg" 
+                alt="Minimercado Ideal Logo"
+            >
+            <h1>Bem-vindo ao Minimercado Ideal!</h1>
+            <p>Seu mercado na palma da mão. Qualidade e conveniência para o seu dia a dia.</p>
+        </div>
+        <nav class="nav justify-content-center">
+            <div class="nav-item">
+                <a class="nav-link active" href="index.html">
+                    Início
+                </a>
+            </div>
+            <div class="nav-item">
+                <span class="nav-link">
+                    ·
+                </span>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="carrinho.html">
+                    Carrinho
+                </a>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <p>Seu mercado na palma da mão. Qualidade e conveniência para o seu dia a dia.</p>
-        </section>
-
-        <h2>Nossas Categorias</h2>
-        <section class="categorias">
-            <a href="frutas-verduras.html" class="categoria-item">
-                <h3>Frutas e Verduras</h3>
-                <img src="imagens/frutas_verduras.png" alt="Imagem de frutas e verduras frescas">
-            </a>
-            <a href="nao-pereciveis.html" class="categoria-item">
-                <h3>Produtos Não Perecíveis</h3>
-                <img src="imagens/nao_pereciveis.png" alt="Imagem de produtos alimentícios não perecíveis">
-            </a>
-            <a href="higiene-limpeza.html" class="categoria-item">
-                <h3>Higiene e Limpeza</h3>
-                <img src="imagens/higiene_limpeza.png" alt="Imagem de produtos de higiene e limpeza">
-            </a>
-        </section>
-
-        <h2>Nossos Serviços</h2>
-        <section class="servicos">
-            <div class="servico-item">
-                <h3>Retirada no Local</h3>
-                <p>Retire seu pedido diretamente em nossa loja, sem custos adicionais.</p>
-                <p>Valor: Gratuito</p>
+    <main class="principal">
+        <section class="categorias container">
+            <h2>Nossas Categorias</h2>
+            <div id="carrossel-categorias" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button 
+                        class="active" 
+                        type="button" 
+                        data-bs-target="#carrossel-categorias" 
+                        data-bs-slide-to="0" 
+                        aria-current="true" 
+                        aria-label="Frutas e Verduras"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carrossel-categorias"
+                        data-bs-slide-to="1"
+                        aria-label="Produtos Não Perecíveis"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carrossel-categorias"
+                        data-bs-slide-to="2"
+                        aria-label="Higiene e Limpeza"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-link-categoria="frutas-verduras.html">
+                        <img 
+                            class="d-block w-100 rounded" 
+                            src="imagens/frutas_verduras.png" 
+                            alt="Imagem de frutas e verduras frescas"
+                        >
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>🍎 Frutas & Verduras</h5>
+                            <p>Produtos frescos e naturais, ricos em nutrientes, ideais para uma alimentação saudável e balanceada. Inclui itens como maçã, banana, alface, cenoura e muito mais.</p>
+                            <p>Clique para ver mais</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-link-categoria="nao-pereciveis.html">
+                        <img 
+                            class="d-block w-100 rounded" 
+                            src="imagens/nao_pereciveis.png" 
+                            alt="Imagem de produtos alimentícios não perecíveis"
+                        >
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>🥫 Produtos Não Perecíveis</h5>
+                            <p>Alimentos com longa validade, perfeitos para armazenamento. Envolve produtos como arroz, feijão, macarrão, enlatados e condimentos.</p>
+                            <p>Clique para ver mais</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-link-categoria="higiene-limpeza.html">
+                        <img 
+                            class="d-block w-100 rounded" 
+                            src="imagens/higiene_limpeza.png" 
+                            alt="Imagem de produtos de higiene e limpeza"
+                        >
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>🧼 Higiene & Limpeza</h5>
+                            <p>Itens essenciais para cuidados pessoais e manutenção da casa. Engloba sabonetes, shampoos, detergentes, desinfetantes e papel higiênico.</p>
+                            <p>Clique para ver mais</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-categorias" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrossel-categorias" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
-            <div class="servico-item">
-                <h3>Tele-entrega</h3>
-                <p>Receba suas compras no conforto de sua casa.</p>
-                <p>Valor: A partir de R$ 10,00 (varia conforme a localização)</p>
+        </section>
+
+        <section class="servicos container">
+            <h2>Nossos Serviços</h2>
+            <div class="lista-c">
+                <div class="servico-item">
+                    <h3>Retirada no Local</h3>
+                    <p>Retire seu pedido diretamente em nossa loja, sem custos adicionais.</p>
+                    <p>Valor: Gratuito</p>
+                </div>
+                <div class="servico-item">
+                    <h3>Tele-entrega</h3>
+                    <p>Receba suas compras no conforto de sua casa.</p>
+                    <p>Valor: A partir de R$ 10,00 (varia conforme a localização)</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
+    <footer class="rodape">
+        <div class="rodape-conteudo">
             <p>&copy; 2025 Minimercado Ideal. Todos os direitos reservados.</p>
             
-            <div class="contato">
+            <div class="rodape-contato">
                 <p><strong>Contato do Estabelecimento:</strong></p>
                 <p>Telefone: (99) 99999-9999</p>
                 <p>E-mail: contato@minimercadoideal.com</p>
                 <p>Endereço: Rua Inácio Teixeira César, 131 - Santa Maria, RS</p>
             </div>
             
-            <div class="autoria">
+            <div class="rodape-autoria">
                 <p><strong>Desenvolvimento:</strong></p>
                 <p>Site desenvolvido por: Felipe Alves</p>
                 <p>Ano: 2025</p>

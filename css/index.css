@@ -1,0 +1,29 @@
+#carrossel-categorias [data-link-categoria] {
+    cursor: pointer;
+}
+
+#carrossel-categorias .carousel-item img {
+    filter: brightness(50%);
+}
+
+#carrossel-categorias {
+    width: 600px;
+    margin: auto;
+}
+
+.lista-servicos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.servico-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 8px;
+    padding: 8px;
+}

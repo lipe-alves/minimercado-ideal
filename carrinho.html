@@ -4,46 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/logo.jpeg">
     <title>Carrinho - Minimercado Ideal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/carrinho.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bem-vindo ao Minimercado Ideal!</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="carrinho.html">Carrinho</a>
+    <header class="cabecalho container-fluid">
+        <div class="cabecalho-titulo">
+            <img 
+                class="d-block w-25"
+                src="imagens/logo.jpeg" 
+                alt="Minimercado Ideal Logo"
+            >
+            <h1>Bem-vindo ao Minimercado Ideal!</h1>
+            <p>Seu mercado na palma da mão. Qualidade e conveniência para o seu dia a dia.</p>
+        </div>
+        <nav class="nav justify-content-center">
+            <div class="nav-item">
+                <a class="nav-link" href="index.html">
+                    Início
+                </a>
+            </div>
+            <div class="nav-item">
+                <span class="nav-link">
+                    ·
+                </span>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link active" href="carrinho.html">
+                    Carrinho
+                </a>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h2>Seu Carrinho de Compras</h2>
-        <section class="carrinho-vazio">
-            <p>Seu carrinho está vazio.</p>
-            <p>Explore nossas categorias para adicionar produtos e serviços!</p>
+    <main class="principal">
+        <section class="container">
+            <h2>Seu Carrinho de Compras</h2>
+            <section id="carrinho-vazio" class="carrinho-vazio">
+                <p>Seu carrinho está vazio.</p>
+                <p>Explore nossas categorias para adicionar produtos e serviços!</p>
+            </section>
+            <ul id="lista-carrinho" class="lista-carrinho border-top pt-3">
+
+            </ul>
+            <div id="resumo-carrinho" class="border-top pt-3">
+                <h4>Total do Carrinho</h4>
+                <p><strong>Subtotal:</strong> R$ <span id="subtotal">12.00</span></p>
+                <p><strong>Frete:</strong> R$ <span id="frete">5.00</span></p>
+                <p><strong>Total:</strong> R$ <span id="total">17.00</span></p>
+                <button class="btn btn-primary mt-2">Finalizar Compra</button>
+            </div>
         </section>
-        <ul class="lista-carrinho"></ul>
     </main>
 
-    <footer>
-        <div class="footer-content">
+    <footer class="rodape">
+        <div class="rodape-conteudo">
             <p>&copy; 2025 Minimercado Ideal. Todos os direitos reservados.</p>
             
-            <div class="contato">
+            <div class="rodape-contato">
                 <p><strong>Contato do Estabelecimento:</strong></p>
                 <p>Telefone: (99) 99999-9999</p>
                 <p>E-mail: contato@minimercadoideal.com</p>
                 <p>Endereço: Rua Inácio Teixeira César, 131 - Santa Maria, RS</p>
             </div>
             
-            <div class="autoria">
+            <div class="rodape-autoria">
                 <p><strong>Desenvolvimento:</strong></p>
                 <p>Site desenvolvido por: Felipe Alves</p>
                 <p>Ano: 2025</p>
             </div>
         </div>
     </footer>
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
