@@ -22,13 +22,14 @@ O site foi desenvolvido para ser uma vitrine online, permitindo a visualização
 
 O projeto está organizado com os seguintes arquivos e diretórios:
 
+* `css/`: Pasta com as folhas de estilos.
+* `js/`: Pasta com arquivos de script.
+* `imagens/`: Pasta de imagens.
 * `index.html`: Página inicial do site.
 * `carrinho.html`: Página do carrinho de compras.
 * `frutas-verduras.html`: Página da categoria de Frutas e Verduras.
 * `nao-pereciveis.html`: Página da categoria de Produtos Não Perecíveis.
 * `higiene-limpeza.html`: Página da categoria de Produtos de Higiene e Limpeza.
-* `styles.css`: Folha de estilos.
-* `script.js`: Arquivo de script.
 * `README.md`: Arquivo de ajuda e descrição do projeto.
 
 ---
