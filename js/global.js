@@ -19,21 +19,72 @@ const carrinho = {
         const produtos = this.produtos();
         const contem = produtos.some(p => p.nome === nomeProduto);
         return contem;
+    },
+    atualizar(nomeProduto, atualizacoes) {
+        const produtos = this.produtos();
+
+        for (const produto of produtos) {
+            if (produto.nome === nomeProduto) {
+                for (const [k, v] of Object.entries(atualizacoes)) {
+                    produto[k] = v;
+                }
+                
+                produto.preco = Number(produto.preco);
+                produto.quantidade = Number(produto.quantidade);
+            }
+        }
+
+        localStorage.setItem("carrinho", JSON.stringify(produtos));
+    },
+    esvaziar() {
+        localStorage.setItem("carrinho", "[]");
     }
 };
 
 const modal = {
     dom() {
-        return document.querySelector(".modal");
+        return document.querySelector("#modal");
     },
-    
     mostrar({
-        titulo,
-        corpo,
-        rodape
+        titulo = "",
+        corpo = "",
+        rodape = ""
     }) {
-        modal.querySelector(".modal-title").innerHTML = titulo;
-        modal.querySelector(".modal-body").innerHTML = corpo;
-        modal.querySelector(".modal-footer").innerHTML = rodape;
+        const modalEl = this.dom();
+        modalEl.querySelector(".modal-title").innerHTML = titulo;
+        modalEl.querySelector(".modal-body").innerHTML = corpo;
+        modalEl.querySelector(".modal-footer").innerHTML = rodape;
+        $(modalEl).modal("show");
+    },
+    fechar() {
+        const modalEl = this.dom();
+        $(modalEl).modal("hide");
+    }
+};
+
+const usuario = {
+    dados() {
+        let usuario = localStorage.getItem("usuario");
+        if (!usuario) return null;
+        usuario = JSON.parse(usuario);
+        return usuario;
+    },
+    salvar(dados) {
+        localStorage.setItem("usuario", JSON.stringify(dados));
+    }
+};
+
+const toast = {
+    sucesso(msg) {
+        bulmaToast.toast({
+            message: msg,
+            type: "toast text-bg-success"
+        });
+    },
+    erro(msg) {
+        bulmaToast.toast({
+            message: msg,
+            type: "toast text-bg-danger"
+        });
     }
 };

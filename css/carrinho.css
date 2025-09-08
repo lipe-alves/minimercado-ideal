@@ -1,0 +1,16 @@
+#opcao-entrega {
+    margin: 1rem 0;
+}
+
+#resumo-carrinho {
+    margin: 1rem 0;
+}
+
+#resumo-carrinho p {
+    margin: 0;
+}
+
+.lista-carrinho {
+    padding-left: 0;
+    list-style: none;
+}

@@ -59,3 +59,13 @@
     text-align: center;
     gap: 0;
 }
+
+.toast.text-bg-success {
+    color: #fff !important;
+    background-color: #1caa68 !important;
+}
+
+.toast.text-bg-danger {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+}
