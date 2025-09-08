@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="cabecalho container-fluid">
+    <header class="cabecalho container-fluid" role="banner">
         <div class="cabecalho-titulo">
             <img 
                 class="d-block w-25"
@@ -25,13 +25,13 @@
             <h1>Bem-vindo ao Minimercado Ideal!</h1>
             <p>Seu mercado na palma da mão. Qualidade e conveniência para o seu dia a dia.</p>
         </div>
-        <nav class="nav justify-content-center">
+        <nav class="nav justify-content-center" role="navigation" aria-label="Navegação principal">
             <div class="nav-item">
                 <a class="nav-link active" href="index.html">
                     Início
                 </a>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" aria-hidden="true">
                 <span class="nav-link">
                     ·
                 </span>
@@ -44,9 +44,9 @@
         </nav>
     </header>
 
-    <main class="principal">
-        <section class="categorias container">
-            <h2>Nossas Categorias</h2>
+    <main class="principal" role="main">
+        <section class="categorias container" aria-labelledby="titulo-categorias">
+            <h2 id="titulo-categorias">Nossas Categorias</h2>
             <div id="carrossel-categorias" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button 
@@ -70,7 +70,7 @@
                         aria-label="Higiene e Limpeza"
                     ></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner" aria-live="polite">
                     <div class="carousel-item active" data-link-categoria="frutas-verduras.html">
                         <img 
                             class="d-block w-100 rounded" 
@@ -78,7 +78,7 @@
                             alt="Imagem de frutas e verduras frescas"
                         >
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>🍎 Frutas & Verduras</h5>
+                            <h5 aria-label="Frutas e Verduras">🍎 Frutas & Verduras</h5>
                             <p>Produtos frescos e naturais, ricos em nutrientes, ideais para uma alimentação saudável e balanceada. Inclui itens como maçã, banana, alface, cenoura e muito mais.</p>
                             <p>Clique para ver mais</p>
                         </div>
@@ -90,7 +90,7 @@
                             alt="Imagem de produtos alimentícios não perecíveis"
                         >
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>🥫 Produtos Não Perecíveis</h5>
+                            <h5 aria-label="Produtos Não Perecíveis">🥫 Produtos Não Perecíveis</h5>
                             <p>Alimentos com longa validade, perfeitos para armazenamento. Envolve produtos como arroz, feijão, macarrão, enlatados e condimentos.</p>
                             <p>Clique para ver mais</p>
                         </div>
@@ -102,7 +102,7 @@
                             alt="Imagem de produtos de higiene e limpeza"
                         >
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>🧼 Higiene & Limpeza</h5>
+                            <h5 aria-label="Higiene e Limpeza">🧼 Higiene & Limpeza</h5>
                             <p>Itens essenciais para cuidados pessoais e manutenção da casa. Engloba sabonetes, shampoos, detergentes, desinfetantes e papel higiênico.</p>
                             <p>Clique para ver mais</p>
                         </div>
@@ -119,8 +119,8 @@
             </div>
         </section>
 
-        <section class="servicos container">
-            <h2>Nossos Serviços</h2>
+        <section class="servicos container" aria-labelledby="titulo-servicos">
+            <h2 id="titulo-servicos">Nossos Serviços</h2>
             <div class="lista-c">
                 <div class="servico-item">
                     <h3>Retirada no Local</h3>
@@ -136,7 +136,7 @@
         </section>
     </main>
 
-    <footer class="rodape">
+    <footer class="rodape" role="contentinfo">
         <div class="rodape-conteudo">
             <p>&copy; 2025 Minimercado Ideal. Todos os direitos reservados.</p>
             

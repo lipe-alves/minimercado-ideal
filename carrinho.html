@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="cabecalho container-fluid">
+    <header class="cabecalho container-fluid" role="banner">
         <div class="cabecalho-titulo">
             <img 
                 class="d-block w-25"
@@ -27,13 +27,13 @@
             <h1>Bem-vindo ao Minimercado Ideal!</h1>
             <p>Seu mercado na palma da mão. Qualidade e conveniência para o seu dia a dia.</p>
         </div>
-        <nav class="nav justify-content-center">
+        <nav class="nav justify-content-center" role="navigation" aria-label="Navegação principal">
             <div class="nav-item">
                 <a class="nav-link" href="index.html">
                     Início
                 </a>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" aria-hidden="true">
                 <span class="nav-link">
                     ·
                 </span>
@@ -49,8 +49,8 @@
     <main class="principal">
         <form id="form-carrinho" class="form-carrinho container">
             <h2>Seu Carrinho de Compras</h2>
-            <div id="opcao-entrega" class="border-top pt-3">
-                <h4>Itens</h4>
+            <div id="opcao-entrega" class="border-top pt-3" aria-labelledby="titulo-itens">
+                <h4 id="titulo-itens">Itens</h4>
                 <ul id="lista-carrinho" class="lista-carrinho">
                     <li id="carrinho-vazio" class="carrinho-vazio">
                         <p>Seu carrinho está vazio.</p>
@@ -58,8 +58,8 @@
                     </li>
                 </ul>
             </div>
-            <div id="opcao-entrega" class="border-top pt-3">
-                <h4>Escolha o tipo de serviço</h4>
+            <div id="opcao-entrega" class="border-top pt-3" aria-labelledby="titulo-opcao-entregas">
+                <h4 id="titulo-opcao-entregas">Escolha o tipo de serviço</h4>
                 <div class="form-check">
                     <input
                         class="form-check-input"
@@ -86,8 +86,8 @@
                     </label>
                 </div>
             </div>
-            <div id="data-hora-agendamento" class="border-top pt-3">
-                <h4>Agende o horário</h4>
+            <div id="data-hora-agendamento" class="border-top pt-3" aria-labelledby="titulo-data-hora-agendamento">
+                <h4 id="titulo-data-hora-agendamento">Agende o horário</h4>
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label for="data-agendamento" class="form-label">Data <span style="color:red;">*</span></label>
@@ -111,8 +111,8 @@
                     </div>
                 </div>
             </div>
-            <div id="endereco" class="border-top pt-3">
-                <h4>Endereço de Entrega</h4>
+            <div id="endereco" class="border-top pt-3" aria-labelledby="titulo-endereco">
+                <h4 id="titulo-endereco">Endereço de Entrega</h4>
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label for="cep" class="form-label">CEP <span style="color:red;">*</span></label>
@@ -143,8 +143,8 @@
                 </div>
 
             </div>
-            <div id="resumo-carrinho" class="border-top pt-3">
-                <h4>Total do Carrinho</h4>
+            <div id="resumo-carrinho" class="border-top pt-3" aria-labelledby="titulo-resumo-carrinho">
+                <h4 id="titulo-resumo-carrinho">Total do Carrinho</h4>
                 <p><strong>Subtotal:</strong> R$ <span id="subtotal">12.00</span></p>
                 <p><strong>Frete:</strong> R$ <span id="frete">5.00</span></p>
                 <p><strong>Total:</strong> R$ <span id="total">17.00</span></p>
@@ -155,7 +155,7 @@
         </form>
     </main>
 
-    <footer class="rodape">
+    <footer class="rodape" role="contentinfo">
         <div class="rodape-conteudo">
             <p>&copy; 2025 Minimercado Ideal. Todos os direitos reservados.</p>
             

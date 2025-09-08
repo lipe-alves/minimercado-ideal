@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/categoria.js"></script>
 </head>
 <body>
-    <header class="cabecalho container-fluid">
+    <header class="cabecalho container-fluid" role="banner">
         <div class="cabecalho-titulo">
             <img 
                 class="d-block w-25"
@@ -27,13 +27,13 @@
                 Envolve produtos como arroz, feijão, macarrão, enlatados e condimentos.
             </p>
         </div>
-        <nav class="nav justify-content-center">
+        <nav class="nav justify-content-center" role="navigation" aria-label="Navegação principal">
             <div class="nav-item">
                 <a class="nav-link" href="index.html">
                     Início
                 </a>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" aria-hidden="true">
                 <span class="nav-link">
                     ·
                 </span>
@@ -74,7 +74,8 @@
             </div>
         </div>
     </main>
-    <footer class="rodape">
+
+    <footer class="rodape" role="contentinfo">
         <div class="rodape-conteudo">
             <p>&copy; 2025 Minimercado Ideal. Todos os direitos reservados.</p>
             
